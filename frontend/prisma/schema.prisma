@@ -1,0 +1,284 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  SUPPORT
+  ENGINEER
+  CUSTOMER
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+}
+
+model User {
+  id            String     @id @default(uuid()) @db.Uuid
+  email         String     @unique @db.VarChar(255)
+  password_hash String     @db.VarChar(255)
+  role          Role       @default(SUPPORT)
+  first_name    String     @db.VarChar(100)
+  last_name     String     @db.VarChar(100)
+  phone         String?    @db.VarChar(20)
+  status        UserStatus @default(ACTIVE)
+  created_at         DateTime   @default(now())
+  updated_at         DateTime   @updatedAt
+  reset_token        String?    @db.VarChar(255)
+  reset_token_expiry DateTime?
+
+  engineer      Engineer?
+  audit_logs    AuditLog[]
+}
+
+enum ProductStatus {
+  ACTIVE
+  DISCONTINUED
+}
+
+model Product {
+  id                   String        @id @default(uuid()) @db.Uuid
+  sku                  String        @unique @db.VarChar(100)
+  name                 String        @db.VarChar(255)
+  description          String?       @db.Text
+  category             String        @db.VarChar(100)
+  base_warranty_months Int
+  price                Decimal       @db.Decimal(10, 2)
+  amc_price            Decimal       @default(0.00) @db.Decimal(10, 2)
+  status               ProductStatus @default(ACTIVE)
+  created_at           DateTime      @default(now())
+  updated_at           DateTime      @updatedAt
+
+  serial_numbers       SerialNumber[]
+}
+
+enum SerialStatus {
+  AVAILABLE
+  SOLD
+  DEFECTIVE
+  RETURNED
+}
+
+model SerialNumber {
+  id                 String       @id @default(uuid()) @db.Uuid
+  product_id         String       @db.Uuid
+  product            Product      @relation(fields: [product_id], references: [id])
+  serial_number      String       @unique @db.VarChar(100)
+  batch_number       String?      @db.VarChar(100)
+  manufacturing_date DateTime?    @db.Date
+  status             SerialStatus @default(AVAILABLE)
+  created_at         DateTime     @default(now())
+  updated_at         DateTime     @updatedAt
+
+  warranty           Warranty?
+}
+
+model Customer {
+  id            String   @id @default(uuid()) @db.Uuid
+  email         String?  @unique @db.VarChar(255)
+  phone         String   @unique @db.VarChar(20)
+  first_name    String   @db.VarChar(100)
+  last_name     String?  @db.VarChar(100)
+  address_line1 String?  @db.VarChar(255)
+  address_line2 String?  @db.VarChar(255)
+  city          String?  @db.VarChar(100)
+  state         String?  @db.VarChar(100)
+  zip_code      String?  @db.VarChar(20)
+  country       String?  @db.VarChar(100)
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+  reset_token        String?  @db.VarChar(255)
+  reset_token_expiry DateTime?
+
+  warranties      Warranty[]
+  service_tickets ServiceTicket[]
+  amc_contracts   AmcContract[]
+}
+
+enum WarrantyStatus {
+  ACTIVE
+  EXPIRED
+  VOID
+}
+
+enum ActivationChannel {
+  PORTAL
+  QR
+  MANUAL
+}
+
+model Warranty {
+  id                 String            @id @default(uuid()) @db.Uuid
+  serial_number_id   String            @unique @db.Uuid
+  serial_number      SerialNumber      @relation(fields: [serial_number_id], references: [id])
+  customer_id        String            @db.Uuid
+  customer           Customer          @relation(fields: [customer_id], references: [id])
+  start_date         DateTime          @db.Date
+  end_date           DateTime          @db.Date
+  status             WarrantyStatus    @default(ACTIVE)
+  activation_channel ActivationChannel
+  installation_date  DateTime?         @db.Date
+  invoice_date       DateTime?         @db.Date
+  invoice_number     String?           @db.VarChar(100)
+  created_at         DateTime          @default(now())
+  updated_at         DateTime          @updatedAt
+
+  certificate     WarrantyCertificate?
+  service_tickets ServiceTicket[]
+  amc_contracts   AmcContract[]
+}
+
+model WarrantyCertificate {
+  id                 String   @id @default(uuid()) @db.Uuid
+  warranty_id        String   @unique @db.Uuid
+  warranty           Warranty @relation(fields: [warranty_id], references: [id])
+  certificate_number String   @unique @db.VarChar(100)
+  pdf_url            String?  @db.VarChar(255)
+  generated_at       DateTime @default(now())
+}
+
+enum TicketStatus {
+  OPEN
+  ASSIGNED
+  IN_PROGRESS
+  ESCALATED
+  RESOLVED
+  CLOSED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+model ServiceTicket {
+  id                 String         @id @default(uuid()) @db.Uuid
+  ticket_number      String         @unique @db.VarChar(50)
+  customer_id        String         @db.Uuid
+  customer           Customer       @relation(fields: [customer_id], references: [id])
+  warranty_id        String?        @db.Uuid
+  warranty           Warranty?      @relation(fields: [warranty_id], references: [id])
+  issue_description  String         @db.Text
+  status             TicketStatus   @default(OPEN)
+  priority           TicketPriority @default(MEDIUM)
+  engineer_id        String?        @db.Uuid
+  engineer           Engineer?      @relation(fields: [engineer_id], references: [id])
+  resolution_notes   String?        @db.Text
+  created_at         DateTime       @default(now())
+  updated_at         DateTime       @updatedAt
+  resolved_at        DateTime?
+  closed_at          DateTime?
+}
+
+model Engineer {
+  id            String   @id @default(uuid()) @db.Uuid
+  user_id       String   @unique @db.Uuid
+  user          User     @relation(fields: [user_id], references: [id])
+  territory     String   @db.VarChar(100)
+  skills        Json?
+  is_available  Boolean  @default(true)
+  current_load  Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  service_tickets ServiceTicket[]
+}
+
+model Inventory {
+  id                String   @id @default(uuid()) @db.Uuid
+  part_number       String   @unique @db.VarChar(100)
+  name              String   @db.VarChar(255)
+  description       String?  @db.Text
+  quantity          Int      @default(0)
+  minimum_threshold Int      @default(5)
+  location          String?  @db.VarChar(100)
+  created_at        DateTime @default(now())
+  updated_at        DateTime @updatedAt
+}
+
+enum AmcStatus {
+  ACTIVE
+  EXPIRED
+  CANCELLED
+  PENDING_RENEWAL
+}
+
+model AmcContract {
+  id                  String    @id @default(uuid()) @db.Uuid
+  warranty_id         String    @db.Uuid
+  warranty            Warranty  @relation(fields: [warranty_id], references: [id])
+  customer_id         String    @db.Uuid
+  customer            Customer  @relation(fields: [customer_id], references: [id])
+  contract_number     String?   @unique @db.VarChar(100)
+  start_date          DateTime  @db.Date
+  end_date            DateTime  @db.Date
+  value               Decimal   @db.Decimal(10, 2)
+  status              AmcStatus @default(ACTIVE)
+  razorpay_order_id   String?   @db.VarChar(100)
+  razorpay_payment_id String?   @db.VarChar(100)
+  razorpay_signature  String?   @db.VarChar(255)
+  payment_status      String    @default("PENDING") @db.VarChar(50)
+  created_at          DateTime  @default(now())
+  updated_at          DateTime  @updatedAt
+}
+
+enum RecipientType {
+  USER
+  CUSTOMER
+  ENGINEER
+}
+
+enum NotificationChannel {
+  EMAIL
+  SMS
+  WHATSAPP
+  IN_APP
+}
+
+enum NotificationStatus {
+  PENDING
+  SENT
+  FAILED
+}
+
+model Notification {
+  id             String              @id @default(uuid()) @db.Uuid
+  recipient_id   String              @db.Uuid
+  recipient_type RecipientType
+  channel        NotificationChannel
+  type           String              @db.VarChar(50)
+  title          String              @db.VarChar(255)
+  content        String              @db.Text
+  status         NotificationStatus  @default(PENDING)
+  created_at     DateTime            @default(now())
+  sent_at        DateTime?
+}
+
+model AuditLog {
+  id          String   @id @default(uuid()) @db.Uuid
+  entity_type String   @db.VarChar(50)
+  entity_id   String   @db.Uuid
+  action      String   @db.VarChar(50)
+  actor_id    String?  @db.Uuid
+  actor       User?    @relation(fields: [actor_id], references: [id])
+  changes     Json?
+  ip_address  String?  @db.VarChar(45)
+  created_at  DateTime @default(now())
+}
+
+model SystemSetting {
+  key        String   @id @db.VarChar(100)
+  value      String   @db.Text
+  updated_at DateTime @updatedAt
+}

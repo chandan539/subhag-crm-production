@@ -1,0 +1,28 @@
+src/controllers/amc.controller.ts(34,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/amc.controller.ts(37,9): error TS2353: Object literal may only specify known properties, and 'serial_number' does not exist in type 'AmcContractInclude<DefaultArgs>'.
+src/controllers/amc.controller.ts(61,9): error TS2353: Object literal may only specify known properties, and 'serial_number_id' does not exist in type 'Without<AmcContractCreateInput, AmcContractUncheckedCreateInput> & AmcContractUncheckedCreateInput'.
+src/controllers/amc.controller.ts(89,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/amc.controller.ts(103,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/amc.controller.ts(104,15): error TS2322: Type '"RENEWED"' is not assignable to type 'AmcStatus | EnumAmcStatusFieldUpdateOperationsInput | undefined'.
+src/controllers/amc.controller.ts(111,9): error TS2353: Object literal may only specify known properties, and 'serial_number_id' does not exist in type 'Without<AmcContractCreateInput, AmcContractUncheckedCreateInput> & AmcContractUncheckedCreateInput'.
+src/controllers/amc.controller.ts(111,44): error TS2339: Property 'serial_number_id' does not exist on type '{ id: string; status: AmcStatus; created_at: Date; updated_at: Date; value: Decimal; customer_id: string; start_date: Date; end_date: Date; warranty_id: string; contract_number: string; }'.
+src/controllers/amc.controller.ts(112,37): error TS2339: Property 'plan_name' does not exist on type '{ id: string; status: AmcStatus; created_at: Date; updated_at: Date; value: Decimal; customer_id: string; start_date: Date; end_date: Date; warranty_id: string; contract_number: string; }'.
+src/controllers/product.controller.ts(28,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/product.controller.ts(67,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/serial.controller.ts(35,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/serial.controller.ts(88,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/ticket.controller.ts(49,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/ticket.controller.ts(107,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/ticket.controller.ts(140,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.
+src/controllers/warranty.controller.ts(37,16): error TS2322: Type 'string | string[]' is not assignable to type 'string | undefined'.
+  Type 'string[]' is not assignable to type 'string'.

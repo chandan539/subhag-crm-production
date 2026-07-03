@@ -1,0 +1,101 @@
+2026-07-03T15:50:28.005955Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-07-03T15:50:28.006090Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "/Users/chandanprasad/warranty androwash/subhag-crm/frontend", pattern: "**/*", negated: false }
+2026-07-03T15:50:28.008056Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-07-03T15:50:28.008063Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "/Users/chandanprasad/warranty androwash/subhag-crm/frontend" }
+2026-07-03T15:50:28.008788Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.008795Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.011211Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.011556Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify.toml"
+2026-07-03T15:50:28.011596Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/postcss.config.mjs"
+2026-07-03T15:50:28.011624Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma"
+2026-07-03T15:50:28.011643Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/amc.controller.ts"
+2026-07-03T15:50:28.011660Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/auth.routes.ts"
+2026-07-03T15:50:28.011663Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/auth.controller.ts"
+2026-07-03T15:50:28.011684Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/services/notification.service.ts"
+2026-07-03T15:50:28.011694Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/payment.routes.ts"
+2026-07-03T15:50:28.011699Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/notification.routes.ts"
+2026-07-03T15:50:28.011732Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/settings.routes.ts"
+2026-07-03T15:50:28.011746Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/engineer.routes.ts"
+2026-07-03T15:50:28.011761Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/seed.ts"
+2026-07-03T15:50:28.011822Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/public/file.svg"
+2026-07-03T15:50:28.011824Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/razorpay.routes.ts"
+2026-07-03T15:50:28.011838Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/README.md"
+2026-07-03T15:50:28.011839Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/warranty.routes.ts"
+2026-07-03T15:50:28.011871Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/customer.routes.ts"
+2026-07-03T15:50:28.011873Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/amc.routes.ts"
+2026-07-03T15:50:28.011905Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/engineer.controller.ts"
+2026-07-03T15:50:28.011919Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/warranty.controller.ts"
+2026-07-03T15:50:28.011978Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/public/vercel.svg"
+2026-07-03T15:50:28.011977Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/middleware/auth.middleware.ts"
+2026-07-03T15:50:28.011980Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/analytics.routes.ts"
+2026-07-03T15:50:28.011981Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/product.routes.ts"
+2026-07-03T15:50:28.012030Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/analytics.controller.ts"
+2026-07-03T15:50:28.012046Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/product.controller.ts"
+2026-07-03T15:50:28.012047Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/notification.controller.ts"
+2026-07-03T15:50:28.012104Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/public/next.svg"
+2026-07-03T15:50:28.012108Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/razorpay.controller.ts"
+2026-07-03T15:50:28.012126Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/services/pdf.service.ts"
+2026-07-03T15:50:28.012131Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/config/prisma.ts"
+2026-07-03T15:50:28.012127Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/ticket.routes.ts"
+2026-07-03T15:50:28.012152Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/certificate/[id]/page.tsx"
+2026-07-03T15:50:28.012171Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/settings.controller.ts"
+2026-07-03T15:50:28.012184Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/settings/page.tsx"
+2026-07-03T15:50:28.012206Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/ticket.controller.ts"
+2026-07-03T15:50:28.012216Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/tickets/page.tsx"
+2026-07-03T15:50:28.012236Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/index.ts"
+2026-07-03T15:50:28.012235Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/warranties/page.tsx"
+2026-07-03T15:50:28.012250Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/products/print/page.tsx"
+2026-07-03T15:50:28.012263Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/routes/serial.routes.ts"
+2026-07-03T15:50:28.012267Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/analytics/page.tsx"
+2026-07-03T15:50:28.012260Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/layout.tsx"
+2026-07-03T15:50:28.012278Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/eslint.config.mjs"
+2026-07-03T15:50:28.012252Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/payment.controller.ts"
+2026-07-03T15:50:28.012293Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/layout.tsx"
+2026-07-03T15:50:28.012356Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/serial.controller.ts"
+2026-07-03T15:50:28.012298Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/products/page.tsx"
+2026-07-03T15:50:28.012312Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/public/globe.svg"
+2026-07-03T15:50:28.012334Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/page.tsx"
+2026-07-03T15:50:28.012369Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/amc/page.tsx"
+2026-07-03T15:50:28.012299Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/activate-account/page.tsx"
+2026-07-03T15:50:28.012428Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/login/forgot-password/page.tsx"
+2026-07-03T15:50:28.012432Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/layout.tsx"
+2026-07-03T15:50:28.012408Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/package.json"
+2026-07-03T15:50:28.012381Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/users/page.tsx"
+2026-07-03T15:50:28.012439Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/register/page.tsx"
+2026-07-03T15:50:28.012453Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/login/page.tsx"
+2026-07-03T15:50:28.012500Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/CLAUDE.md"
+2026-07-03T15:50:28.012506Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions/controllers/customer.controller.ts"
+2026-07-03T15:50:28.012507Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/utils/api.ts"
+2026-07-03T15:50:28.012522Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/admin/page.tsx"
+2026-07-03T15:50:28.012458Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/page.tsx"
+2026-07-03T15:50:28.012535Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/tickets/page.tsx"
+2026-07-03T15:50:28.012540Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/components/Security/ContextMenuBlocker.tsx"
+2026-07-03T15:50:28.012463Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/tsconfig.json"
+2026-07-03T15:50:28.012524Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/next.config.ts"
+2026-07-03T15:50:28.012596Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/AGENTS.md"
+2026-07-03T15:50:28.012554Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/hooks/useAuth.tsx"
+2026-07-03T15:50:28.012532Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/portal/warranties/page.tsx"
+2026-07-03T15:50:28.012679Z  INFO tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/public/window.svg"
+2026-07-03T15:50:28.012695Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.012700Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.012703Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.012706Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014151Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014161Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014165Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014168Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-07-03T15:50:28.014187Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/src/app/globals.css"
+2026-07-03T15:50:28.014192Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014195Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014198Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014239Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014246Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014448Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014807Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014812Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.014814Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.014882Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.015020Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.015025Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-07-03T15:50:28.015028Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-07-03T15:50:28.017663Z  INFO get_globs: tailwindcss_oxide::scanner: exit

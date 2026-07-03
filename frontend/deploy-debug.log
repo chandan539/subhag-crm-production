@@ -1,0 +1,508 @@
+[project.ts]: detectFrameworks
+[project.ts]: detectBuildSystem
+[project.ts]: detectWorkspaces
+[project.ts]: detectPackageManager
+[project.ts]: detectFrameworksInPath - undefined
+​
+❯ Initial build environment
+config: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify.toml
+context: dev
+cwd: /Users/chandanprasad/warranty androwash/subhag-crm
+featureFlags: []
+mode: cli
+repositoryRoot: /Users/chandanprasad/warranty androwash/subhag-crm
+siteId: fff07b71-e465-4397-a84d-a06f0148a943
+​
+❯ UI build settings
+baseRelDir: false
+​
+❯ Resolved build environment
+branch: main
+buildDir: /Users/chandanprasad/warranty androwash/subhag-crm
+configPath: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify.toml
+context: dev
+env:
+  - DATABASE_URL
+  - DIRECT_URL
+  - TEST_VAR
+  - DEPLOY_ID
+  - BUILD_ID
+  - ACCOUNT_ID
+  - NETLIFY_LOCAL
+  - HEAD
+  - COMMIT_REF
+  - CACHED_COMMIT_REF
+  - PULL_REQUEST
+  - LANG
+  - LANGUAGE
+  - LC_ALL
+  - GATSBY_TELEMETRY_DISABLED
+  - NEXT_TELEMETRY_DISABLED
+​
+❯ Resolved config
+build:
+  command: npm run build
+  commandOrigin: config
+  publish: /Users/chandanprasad/warranty androwash/subhag-crm
+  publishOrigin: default
+plugins:
+  - inputs: {}
+    origin: config
+    package: "@netlify/plugin-nextjs"
+redirects:
+  - from: /api/*
+    status: 200
+    to: /.netlify/functions/index
+  - from: /*
+    status: 200
+    to: /.netlify/functions/___netlify-server-handler
+redirectsOrigin: config
+ ›   Warning: --build is now the default and can safely be omitted.
+[project.ts]: getBuildSettings
+[project.ts]: detectFrameworks
+[get-build-settings.ts] getBuildSettings for baseDirectory: 
+​
+Netlify Build                                                 
+────────────────────────────────────────────────────────────────
+​
+❯ Version
+  @netlify/build 35.12.0
+​
+❯ Flags
+  accountId: 689aeafd2a26ebb2da2c2144
+  debug: true
+  deployId: 6a47da3c68ec876665432ace
+  edgeFunctionsBootstrapURL: https://v2-17-1--edge.netlify.com/bootstrap/index-combined.ts
+  featureFlags:
+    - netlify_build_db_setup
+  mode: cli
+  siteId: fff07b71-e465-4397-a84d-a06f0148a943
+  skewProtectionToken: f78c53080eb8e5eba7950e72ba16915295db8165f256d7e99adf4bc1478e27da366134376461336336386563383736363635343332616365
+​
+❯ Current directory
+  /Users/chandanprasad/warranty androwash/subhag-crm/frontend
+​
+❯ Config file
+  /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify.toml
+​
+❯ Resolved config
+  build:
+    base: /Users/chandanprasad/warranty androwash/subhag-crm/frontend
+    command: npm run build
+    commandOrigin: config
+    publish: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/.next
+    publishOrigin: ui
+  functionsDirectory: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions
+  plugins:
+    - inputs: {}
+      origin: config
+      package: "@netlify/plugin-nextjs"
+  redirects:
+    - from: /api/*
+      status: 200
+      to: /.netlify/functions/index
+    - from: /*
+      status: 200
+      to: /.netlify/functions/___netlify-server-handler
+  redirectsOrigin: config
+​
+❯ Context
+  production
+​
+❯ Available plugins
+   - @21yunbox/netlify-plugin-21yunbox-deploy-to-china-cdn@1.0.7
+   - @algolia/netlify-plugin-crawler@1.0.0
+   - @bharathvaj/netlify-plugin-airbrake@1.0.2
+   - @chiselstrike/netlify-plugin@0.1.0
+   - @commandbar/netlify-plugin-commandbar@0.0.4
+   - @helloample/netlify-plugin-replace@1.1.4
+   - @netlify/angular-runtime@4.0.0
+   - @netlify/feature-package-pilot@0.1.11
+   - @netlify/plugin-angular-universal@1.0.1
+   - @netlify/plugin-contentful-buildtime@0.0.3
+   - @netlify/plugin-emails@1.1.1
+   - @netlify/plugin-gatsby@3.8.4
+   - @netlify/plugin-lighthouse@6.0.1
+   - @netlify/plugin-nextjs@5.7.0-ipx.0
+   - @netlify/plugin-sitemap@0.8.1
+   - @newrelic/netlify-plugin@1.0.2
+   - @sentry/netlify-build-plugin@1.1.1
+   - @snaplet/netlify-preview-database-plugin@2.0.0
+   - @takeshape/netlify-plugin-takeshape@1.0.0
+   - @vgs/netlify-plugin-vgs@0.0.2
+   - netlify-build-plugin-dareboost@1.2.1
+   - netlify-build-plugin-debugbear@1.0.6
+   - netlify-build-plugin-perfbeacon@1.0.3
+   - netlify-build-plugin-speedcurve@2.0.0
+   - netlify-deployment-hours-plugin@0.0.10
+   - netlify-plugin-a11y@0.0.12
+   - netlify-plugin-add-instagram@0.2.2
+   - netlify-plugin-algolia-index@0.3.0
+   - netlify-plugin-amp-server-side-rendering@1.0.2
+   - netlify-plugin-brand-guardian@1.0.1
+   - netlify-plugin-build-logger@1.0.3
+   - netlify-plugin-bundle-env@0.2.2
+   - netlify-plugin-cache-nextjs@1.4.0
+   - netlify-plugin-cecil-cache@0.3.3
+   - netlify-plugin-checklinks@4.1.1
+   - netlify-plugin-chromium@1.1.4
+   - netlify-plugin-cloudinary@1.17.0
+   - netlify-plugin-contextual-env@0.3.0
+   - netlify-plugin-cypress@2.2.0
+   - netlify-plugin-debug-cache@1.0.4
+   - netlify-plugin-encrypted-files@0.0.5
+   - netlify-plugin-fetch-feeds@0.2.3
+   - netlify-plugin-flutter@1.1.0
+   - netlify-plugin-formspree@1.0.1
+   - netlify-plugin-gatsby-cache@0.3.0
+   - netlify-plugin-get-env-vars@1.0.0
+   - netlify-plugin-ghost-inspector@1.0.1
+   - netlify-plugin-ghost-markdown@3.1.0
+   - netlify-plugin-gmail@1.1.0
+   - netlify-plugin-gridsome-cache@1.0.3
+   - netlify-plugin-hashfiles@4.0.2
+   - netlify-plugin-html-validate@1.0.0
+   - netlify-plugin-hugo-cache-resources@0.2.1
+   - netlify-plugin-image-optim@0.4.0
+   - netlify-plugin-inline-critical-css@2.0.0
+   - netlify-plugin-inline-functions-env@1.0.8
+   - netlify-plugin-inline-source@1.0.4
+   - netlify-plugin-inngest@1.0.0
+   - netlify-plugin-is-website-vulnerable@2.0.3
+   - netlify-plugin-jekyll-cache@1.0.0
+   - netlify-plugin-js-obfuscator@1.0.20
+   - netlify-plugin-minify-html@0.3.1
+   - netlify-plugin-next-dynamic@1.0.9
+   - netlify-plugin-nimbella@2.1.0
+   - netlify-plugin-no-more-404@0.0.15
+   - netlify-plugin-nx-skip-build@0.0.7
+   - netlify-plugin-pagewatch@1.0.4
+   - netlify-plugin-playwright-cache@0.0.1
+   - netlify-plugin-prerender-spa@1.0.1
+   - netlify-plugin-prisma-provider@0.3.0
+   - netlify-plugin-pushover@0.1.1
+   - netlify-plugin-qawolf@1.2.0
+   - netlify-plugin-rss@0.0.8
+   - netlify-plugin-search-index@0.1.5
+   - netlify-plugin-snyk@1.2.0
+   - netlify-plugin-stepzen@1.0.4
+   - netlify-plugin-subfont@6.0.0
+   - netlify-plugin-submit-sitemap@0.4.0
+   - netlify-plugin-to-all-events@1.3.1
+   - netlify-plugin-use-env-in-runtime@1.2.1
+   - netlify-plugin-visual-diff@2.0.0
+   - netlify-plugin-webmentions@1.1.0
+   - netlify-purge-cloudflare-on-deploy@1.2.0
+   - strapi-plugin-netlify-deployments@2.0.1
+Used compatible version '5.15.12' for plugin '@netlify/plugin-nextjs' (pinned version is undefined)
+​
+❯ Using Next.js Runtime - v5.15.12
+Build step duration: @netlify/plugin-nextjs onPreBuild completed in 501ms
+​
+build.command from netlify.toml                               
+────────────────────────────────────────────────────────────────
+​
+$ npm run build
+
+> frontend@0.1.0 build
+> npx prisma generate && next build
+
+prisma:cli:bin Failed to initialize the command state: Error: ENOENT: no such file or directory, open '/Users/chandanprasad/Library/Preferences/prisma-nodejs/commands.json' +711ms
+prisma:config:loadConfigFromFile Config file loaded in 58.99ms +603ms
+prisma:config:loadConfigFromFile No config file found in the current working directory /Users/chandanprasad/warranty androwash/subhag-crm/frontend +0ms
+prisma:getSchema prismaConfig null +61ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getConfig Using getConfig Wasm +0ms
+prisma:getConfig config data retrieved without errors in getConfig Wasm +11ms
+prisma:engines binaries to download schema-engine, libquery-engine +779ms
+prisma:getSchema prismaConfig null +2ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema prismaConfig null +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +1ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getConfig Using getConfig Wasm +0ms
+prisma:getConfig config data retrieved without errors in getConfig Wasm +1ms
+prisma:cli:checkpoint runCheckpointClientCheck(): Execution time for getting info: 3.7946249999999964 ms +1ms
+prisma:cli:checkpoint runCheckpointClientCheck(): Execution time for "await checkpoint.check(data)": 18.42933299999993 ms +18ms
+prisma:loadEnv project root found at /Users/chandanprasad/warranty androwash/subhag-crm/frontend/package.json +81ms
+prisma:getSchema prismaConfig null +1ms
+prisma:tryLoadEnv Environment variables not found at null +0ms
+prisma:tryLoadEnv Environment variables not found at undefined +0ms
+prisma:tryLoadEnv No Environment variables loaded +0ms
+prisma:getSchema prismaConfig null +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/schema.prisma +0ms
+prisma:getSchema Checking existence of /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+prisma:getSchema Reading schema from single file /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma/schema.prisma +0ms
+Prisma schema loaded from prisma/schema.prisma
+prisma:getConfig Using getConfig Wasm +0ms
+prisma:getConfig config data retrieved without errors in getConfig Wasm +2ms
+prisma:getDMMF Using getDmmf Wasm +0ms
+prisma:getDMMF dmmf data retrieved without errors in getDmmf Wasm +34ms
+prisma:client:generator requiresEngines [
+  "libqueryEngine"
+] +1ms
+prisma:generator prismaCliDir /Users/chandanprasad/warranty androwash/subhag-crm/frontend/node_modules/prisma +1ms
+prisma:generator prismaClientDir /Users/chandanprasad/warranty androwash/subhag-crm/frontend/node_modules/@prisma/client +0ms
+prisma:generator baseDir /Users/chandanprasad/warranty androwash/subhag-crm/frontend/prisma +0ms
+prisma:mergeSchemas Using mergeSchemas Wasm +0ms
+prisma:loadEnv project root found at /Users/chandanprasad/warranty androwash/subhag-crm/frontend/node_modules/@prisma/client/package.json +4ms
+prisma:getSchema prismaConfig null +0ms
+prisma:getGenerators neededVersions {
+  "c2990dca591cba766e3b7ef5d9e8a84796e47ab7": {
+    "engines": [
+      "libqueryEngine"
+    ],
+    "binaryTargets": [
+      {
+        "fromEnvVar": null,
+        "value": "darwin-arm64",
+        "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
+      }
+    ]
+  }
+} +0ms
+prisma:getGenerators {
+  "generatorBinaryPaths": {
+    "libqueryEngine": {
+      "darwin-arm64": "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/node_modules/prisma/libquery_engine-darwin-arm64.dylib.node",
+      "rhel-openssl-3.0.x": "/Users/chandanprasad/warranty androwash/subhag-crm/frontend/node_modules/prisma/libquery_engine-rhel-openssl-3.0.x.so.node"
+    }
+  }
+} +72ms
+prisma:tryLoadEnv Environment variables not found at null +3ms
+prisma:tryLoadEnv Environment variables not found at undefined +1ms
+prisma:tryLoadEnv No Environment variables loaded +0ms
+prisma:cli:bin Execution time for executing "await cli.parse(commandArray)": 528.815208 ms +298ms
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 285ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/chandanprasad/warranty androwash/subhag-crm/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/chandanprasad/warranty androwash/subhag-crm/frontend/package-lock.json
+
+▲ Next.js 16.2.9 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+[2m[DEBUG][22m Writing debug info to: [2m[34m`[39m[22m[34m/Users/chandanprasad/warranty androwash/subhag-crm/frontend/tailwindcss-20209.log[39m[2m[34m`[39m[22m
+
+
+[2m[93.02ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[13.90ms][22m  [2m ↳ [22mSetup compiler
+[2m[ 0.14ms][22m    [2m ↳ [22mPostCSS AST -> Tailwind CSS AST
+[2m[13.75ms][22m    [2m ↳ [22mCreate compiler
+[2m[ 0.04ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 4.64ms][22m  [2m ↳ [22mSetup scanner
+[2m[ 6.09ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 2.90ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[19.88ms][22m  [2m ↳ [22mBuild utilities
+[2m[43.30ms][22m  [2m ↳ [22mOptimization
+[2m[ 0.54ms][22m    [2m ↳ [22mAST -> CSS
+[2m[36.71ms][22m    [2m ↳ [22mLightning CSS
+[2m[ 6.03ms][22m    [2m ↳ [22mCSS -> PostCSS AST
+[2m[ 2.03ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+✓ Compiled successfully in 2.1s
+  Running TypeScript ...
+  Finished TypeScript in 2.4s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/20) ...
+  Generating static pages using 7 workers (5/20) 
+  Generating static pages using 7 workers (10/20) 
+  Generating static pages using 7 workers (15/20) 
+✓ Generating static pages using 7 workers (20/20) in 204ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /activate-account
+├ ○ /admin
+├ ○ /admin/amc
+├ ○ /admin/analytics
+├ ○ /admin/products
+├ ○ /admin/products/print
+├ ○ /admin/settings
+├ ○ /admin/tickets
+├ ○ /admin/users
+├ ○ /admin/warranties
+├ ƒ /certificate/[id]
+├ ○ /portal
+├ ○ /portal/login
+├ ○ /portal/login/forgot-password
+├ ○ /portal/tickets
+├ ○ /portal/warranties
+└ ○ /register
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+​
+(build.command completed in 8.9s)
+Build step duration: build.command completed in 8973ms
+Netlify configuration property "headers" value changed to [
+  {
+    for: '/_next/static/*',
+    values: { 'Cache-Control': 'public, max-age=31536000, immutable' }
+  }
+].
+Netlify configuration property "redirects" value changed to [
+  {
+    from: '/api/*',
+    query: {},
+    to: '/.netlify/functions/index',
+    status: 200,
+    force: false,
+    conditions: {},
+    headers: {}
+  },
+  {
+    from: '/*',
+    query: {},
+    to: '/.netlify/functions/___netlify-server-handler',
+    status: 200,
+    force: false,
+    conditions: {},
+    headers: {}
+  },
+  {
+    from: '/_next/image',
+    query: { url: ':url', w: ':width', q: ':quality' },
+    to: '/.netlify/images?url=:url&w=:width&q=:quality',
+    status: 200
+  },
+  {
+    from: '/_ipx/*',
+    query: { url: ':url', w: ':width', q: ':quality' },
+    to: '/.netlify/images?url=:url&w=:width&q=:quality',
+    status: 200
+  }
+].
+​
+@netlify/plugin-nextjs (onBuild event)                        
+────────────────────────────────────────────────────────────────
+​
+​
+❯ Updated config
+  build:
+    base: /Users/chandanprasad/warranty androwash/subhag-crm/frontend
+    command: npm run build
+    commandOrigin: config
+    publish: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/.next
+    publishOrigin: ui
+  functionsDirectory: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions
+  headers:
+    - for: /_next/static/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+  headersOrigin: inline
+  plugins:
+    - inputs: {}
+      origin: config
+      package: "@netlify/plugin-nextjs"
+  redirects:
+    - from: /api/*
+      status: 200
+      to: /.netlify/functions/index
+    - from: /*
+      status: 200
+      to: /.netlify/functions/___netlify-server-handler
+    - from: /_next/image
+      query:
+        q: :quality
+        url: :url
+        w: :width
+      status: 200
+      to: /.netlify/images?url=:url&w=:width&q=:quality
+    - from: /_ipx/*
+      query:
+        q: :quality
+        url: :url
+        w: :width
+      status: 200
+      to: /.netlify/images?url=:url&w=:width&q=:quality
+  redirectsOrigin: inline
+​
+(@netlify/plugin-nextjs onBuild completed in 3.3s)
+Build step duration: @netlify/plugin-nextjs onBuild completed in 3305ms
+​
+Functions bundling                                            
+────────────────────────────────────────────────────────────────
+​
+Packaging Functions from .netlify/functions-internal directory:
+ - ___netlify-server-handler/___netlify-server-handler.mjs
+​
+Packaging Functions from netlify/functions directory:
+ - index.ts
+​
+​
+(Functions bundling completed in 2.1s)
+Build step duration: Functions bundling completed in 2119ms
+Build step duration: Edge Functions bundling completed in 1ms
+Build step duration: @netlify/plugin-nextjs onPostBuild completed in 13ms
+Uploading 22 blobs to deploy store...
+Done uploading blobs to deploy store.
+Build step duration: Uploading blobs completed in 7590ms
+
+Deploying to Netlify
+────────────────────────────────────────────────────────────────
+
+Deploy path:        /Users/chandanprasad/warranty androwash/subhag-crm/frontend/.next
+Functions path:     /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify/functions
+Configuration path: /Users/chandanprasad/warranty androwash/subhag-crm/frontend/netlify.toml
+
+⠋ Uploading blobs to deploy store...
+
+✔ Finished uploading blobs to deploy store
+⠋ Hashing files...
+⠋ Looking for a functions cache...
+✔ No cached functions were found
+✔ Finished hashing 52 files and 1 functions
+⠋ CDN diffing files...
+✔ CDN requesting 0 files and 1 functions
+⠋ Uploading 1 files
+✔ Finished uploading 1 assets
+⠋ Waiting for deploy to go live...
+✔ Deploy is live!
+Build step duration: options.onPostBuild completed in 75221ms
+Build step duration: @netlify/plugin-nextjs onSuccess completed in 840ms
+Build step duration: @netlify/plugin-nextjs onEnd completed in 4ms
+Build step duration: options.onEnd completed in 3ms
+​
+Netlify Build Complete                                        
+────────────────────────────────────────────────────────────────
+​
+(Netlify Build completed in 1m 40.7s)
+Build step duration: Netlify Build completed in 100752ms
+
+🚀 Deploy complete
+────────────────────────────────────────────────────────────────
+
+Production URL: <https://warranty.subhag.in>
+Unique deploy URL: <https://6a47da3c68ec876665432ace--subhag-crm-frontend.netlify.app>
+
+Build logs: <https://app.netlify.com/projects/subhag-crm-frontend/deploys/6a47da3c68ec876665432ace>
+Function logs: <https://app.netlify.com/projects/subhag-crm-frontend/logs/functions>
+Edge function logs: <https://app.netlify.com/projects/subhag-crm-frontend/logs/edge-functions>
